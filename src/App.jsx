@@ -1,10 +1,21 @@
 import { createSignal } from 'solid-js';
+import confetti from 'canvas-confetti';
 import './App.css';
 
 function App() {
   const [currentStep, setCurrentStep] = createSignal(0);
   const [password, setPassword] = createSignal('');
   const [error, setError] = createSignal('');
+
+  // Función para lanzar confeti
+  const launchConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  };
+
   const welcomeMessage = (
     <>
       <h2>Bienvenida a la Búsqueda del Tesoro Yacira 🎉</h2>
@@ -15,9 +26,11 @@ function App() {
       </p>
     </>
   );
+
   const emojis = [
     '😊', '👍', '🤩', '🎉', '👀', '🤔', '🚀', '👽', '🤖', '🎊', '👫', '🤝', '🎁', '👻', '🕷️', '👺', '🤯', '🎈', '👾', '🤩', '🎊', '👻', '🕷️', '👺', '🤯', '🎈'
   ];
+
   const rules = (
     <>
       <h3>Reglas del juego:</h3>
@@ -26,17 +39,19 @@ function App() {
           Tienes que encontrar la pista en cada ubicación para avanzar. 📍
         </li>
         <li>
-          Una vez tengas el tesoro de cada ubicación, ingresa la contraseña correcta para pasar al siguiente paso 🔑.
+          Una vez tengas la tarjeta de cada ubicación, ingresa la contraseña correcta para pasar al siguiente nivel 🔑.
         </li>
         <li>
-          Acordate de anotar las contraseñas, ya que si recargas la página tendrás que empezar de nuevo, osea a ingresar las contraseñas no todo el juego jaja 😂.
+          Acordate de guardar las tarjetas, ya que si recargas la página tendrás que empezar de nuevo, osea a ingresar las contraseñas no todo el juego jaja 😂.
         </li>
+        <p>Cada vez obtengas una tarjeta escaneala para ver el mensaje!!</p>
         <li>
           ¡Divértite y ojala pierdas mi juego es muy bueno 😂!
         </li>
       </ul>
     </>
   );
+
   const rule1 = (
     <>
       <h3>Reglas del nivel:</h3>
@@ -53,15 +68,16 @@ function App() {
       </ul>
     </>
   );
+
   const rule2 = (
     <>
       <h3>Reglas del nivel:</h3>
       <ul class="rules-list">
         <p>
-          Pedile a la secretaria que te de el libro los novios de Alessandro Manzzoni 📖.
+          Pedile a la secretaria de la biblioteca que te de el libro Jane Eyre de Charlotte Brontë 📖.
         </p>
         <li>
-          Anda al capítulo XXXIV ahí encontras la contraseña, si quieres despues lo leemos juntos, ay lo que uno hace para ponerla che jssj 😂.
+          Anda a la pagina 101 ahí encontras la tarjeta, si quieres despues lo leemos juntos jssj 😂.
         </li>
         <li>
           ¡Ya que yo controlo esto aprovecho el espacio para decirte que sos muy hermosa boluda 😊!
@@ -69,6 +85,7 @@ function App() {
       </ul>
     </>
   );
+
   const rule3 = (
     <>
       <h3>¡El BOSS Final¡:</h3>
@@ -80,8 +97,9 @@ function App() {
           Te podría escribir, te podría leer pero lo que yo quiero escojer algo para la última prueba 🤔.
         </li>
         <li>
-          En la cafeteria Vitrage te dejo la última contraseña.. nadie piensa en ellas pero hoy día nos dan el acceso a todo en nuestras vidas, por eso 3 claves, llaves para que obtengas tu regalo... 🎁
+          En la cafeteria Vitrage te dejo la última contraseña.. nadie piensa en ellas pero hoy día nos dan el acceso a todo en nuestras vidas, por eso 3 claves, llaves para que obtengas tu premio... 🎁
         </li>
+        <p>Acercate a la barra y deci que dejaron algo para Yacira</p>
       </ul>
     </>
   );
@@ -103,7 +121,7 @@ function App() {
     },
     {
       title: 'Segundo nivel... mi libro tu libro',
-      text: '¡Genial Encontraste la primera contraseña jaja no tenia esperanzas pero aquí estás... bueno sigamos, ahora toca la biblioteca popular 📚',
+      text: '¡Genial Encontraste la primera contraseña jaja no tenia esperanzas pero aquí estás... bueno sigamos, ahora toca la Biblioteca Popular 📚',
       rule: rule2,
       buttonText: 'Siguiente',
       password: 'unaflorunarosa', // Contraseña para el tercer paso
@@ -119,11 +137,13 @@ function App() {
 
   const nextStep = () => {
     if (password() === steps[currentStep()].password || currentStep() === 0) {
+      launchConfetti(); // Lanzar confeti al pasar de nivel
+
       if (currentStep() < steps.length - 1) {
         setCurrentStep(currentStep() + 1);
       } else {
         alert(
-          '¡Has completado la búsqueda del tesoro Pasa por tu premio, en la floristería deci que quieres el pedido de Juan Ignacio Tiseira 🎁'
+          '¡Has completado la búsqueda del tesoro Pasa por tu premio, en la floristería Floreria la Familia deci que quieres retirar el pedido de Yacira 🎁'
         );
         setCurrentStep(0); // Reiniciar el juego o hacer lo que prefieras aquí.
       }
