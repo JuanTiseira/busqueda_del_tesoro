@@ -36,13 +36,13 @@ function App() {
       <h3>Reglas del juego:</h3>
       <ul class="rules-list">
         <li>
-          Tienes que encontrar la pista en cada ubicación para avanzar. 📍
+          Tenes que encontrar la pista en cada ubicación para avanzar. 📍
         </li>
         <li>
           Una vez tengas la tarjeta de cada ubicación, ingresa la contraseña correcta para pasar al siguiente nivel 🔑.
         </li>
         <li>
-          Acordate de guardar las tarjetas, ya que si recargas la página tendrás que empezar de nuevo, osea a ingresar las contraseñas no todo el juego jaja 😂.
+          Acordate de guardar las tarjetas, ya que si recargas la página tenes que empezar de nuevo, osea a ingresar las contraseñas no todo el juego jaja 😂.
         </li>
         <p>Cada vez obtengas una tarjeta escaneala para ver el mensaje!!</p>
         <li>
@@ -77,7 +77,7 @@ function App() {
           Pedile a la secretaria de la biblioteca que te de el libro Jane Eyre de Charlotte Brontë 📖.
         </p>
         <li>
-          Anda a la pagina 101 ahí encontras la tarjeta, si quieres despues lo leemos juntos jssj 😂.
+          Anda a la pagina 101 ahí encontras la tarjeta, si queres lo leemos juntos alto libro jssj 😂.
         </li>
         <li>
           ¡Ya que yo controlo esto aprovecho el espacio para decirte que sos muy hermosa boluda 😊!
@@ -94,7 +94,7 @@ function App() {
           A la gente le aterra el final de las cosas pero yo sé que donde algo termina es por que comienza otra cosa 🌈.
         </p>
         <li>
-          Te podría escribir, te podría leer pero lo que yo quiero escojer algo para la última prueba 🤔.
+          Te podría escribir, te podría leer pero lo que yo quiero es coger algo para la última prueba 🤔.
         </li>
         <li>
           En la cafeteria Vitrage te dejo la última contraseña.. nadie piensa en ellas pero hoy día nos dan el acceso a todo en nuestras vidas, por eso 3 claves, llaves para que obtengas tu premio... 🎁
@@ -181,8 +181,9 @@ function App() {
         )}
       </div>
       <p>
-        <strong>Advertencia</strong> este juego fue diseñado exclusivamente para Yacira Schneider 😊
+        <strong>Advertencia!</strong> este juego fue creado exclusivamente para Yacira Schneider 😊 
       </p>
+      <p class='p-disclaimer'>By juani</p>
     </div>
   );
 }

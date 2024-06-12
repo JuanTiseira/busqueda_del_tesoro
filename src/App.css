@@ -103,3 +103,7 @@ p {
 .rules-list li {
   margin-bottom: 10px;
 }
+
+.p-disclaimer {
+  font-style: italic;
+}
