@@ -24,6 +24,7 @@ function App() {
         ¡El juego está diseñado para desafiarte 😊 jaja mentira o no? ¿Estás lista
         para empezar? 🎊
       </p>
+      <h3>Gracias a todos los que se prestaron este desafio pudo ser configurado!</h3>
     </>
   );
 
@@ -56,9 +57,12 @@ function App() {
     <>
       <h3>Reglas del nivel:</h3>
       <ul class="rules-list">
+      <p>Por que el que duerme no molesta dicen...</p>
+        
         <p>
-          En la base sobre la que apoya la estatua de sanma un capo por cierto esta la respuesta osea la contraseña 🤔
+          En la vidriera de la casa de colchones Dormilandia esta la pista pegada jaja era mucho mejor la ubicacion en un principio pero la cambie por seguridad de la pista 🤔
         </p>
+        <p>Esta ubicada cerca de la pared contraria a la puerta de entrada del local</p>
         <li>
           Bueno de mas esta decir que guardes la contraseña no la voy a poner de nuevo si se pierde 😊.
         </li>
@@ -90,6 +94,7 @@ function App() {
     <>
       <h3>¡El BOSS Final¡:</h3>
       <ul class="rules-list">
+        <p>Este es el nivel mas dificil por que no se cuanto tiempo quede la pista ahi.. asi que apurate!!!</p>
         <p>
           A la gente le aterra el final de las cosas pero yo sé que donde algo termina es por que comienza otra cosa 🌈.
         </p>
@@ -113,8 +118,8 @@ function App() {
       password: 'start123', // Contraseña para el primer paso
     },
     {
-      title: 'Primer nivel... Libertador de America',
-      text: '¡Te felicito, sos valiente jsj ingresaste al primer nivel la ubicación es la plaza San Martín re obvio.. mira el título 🎉',
+      title: 'Primer nivel... Dormilandia',
+      text: '¡Te felicito, sos valiente jsj ingresaste al primer nivel la ubicación es la colchoneria Dormilandia jaja  🎉',
       rule: rule1,
       buttonText: 'Siguiente',
       password: 'preciosahermosa', // Contraseña para el segundo paso
