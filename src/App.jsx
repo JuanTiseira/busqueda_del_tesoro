@@ -148,7 +148,7 @@ function App() {
         setCurrentStep(currentStep() + 1);
       } else {
         alert(
-          '¡Has completado la búsqueda del tesoro Pasa por tu premio, en la floristería Floreria la Familia deci que quieres retirar el pedido de Yacira 🎁'
+          '¡Has completado la búsqueda del tesoro Pasa por tu premio, en la floristería imperio de las flores deci que queres retirar el pedido de Yacira 🎁'
         );
         setCurrentStep(0); // Reiniciar el juego o hacer lo que prefieras aquí.
       }
